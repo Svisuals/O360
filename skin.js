@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.13/18080
 // Filename: Obra_360.ggsk
-// Generated 2024-07-11T20:19:02
+// Generated 2024-07-11T20:28:31
 
 function pano2vrSkin(player,base) {
 	player.addVariable('TITLES', 2, false);
@@ -4037,6 +4037,30 @@ function pano2vrSkin(player,base) {
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
+		me._rectangle_2.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._rectangle_2.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._rectangle_2.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._rectangle_2.style[domTransition]='';
+				if (me._rectangle_2.ggCurrentLogicStateVisible == 0) {
+					me._rectangle_2.style.visibility="hidden";
+					me._rectangle_2.ggVisible=false;
+				}
+				else {
+					me._rectangle_2.style.visibility=(Number(me._rectangle_2.style.opacity)>0||!me._rectangle_2.style.opacity)?'inherit':'hidden';
+					me._rectangle_2.ggVisible=true;
+				}
+			}
+		}
 		me._rectangle_2.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
 				useTransition = false;
@@ -4130,6 +4154,34 @@ function pano2vrSkin(player,base) {
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
+		me._video_1.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._video_1.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._video_1.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._video_1.style[domTransition]='';
+				if (me._video_1.ggCurrentLogicStateVisible == 0) {
+					me._video_1.style.visibility="hidden";
+					me._video_1.ggInitMedia('');
+					me._video_1.ggVisible=false;
+				}
+				else {
+					me._video_1.style.visibility=(Number(me._video_1.style.opacity)>0||!me._video_1.style.opacity)?'inherit':'hidden';
+					if (me._video_1.ggVideoNotLoaded) {
+						me._video_1.ggInitMedia(me._video_1.ggVideoSource);
+					}
+					me._video_1.ggVisible=true;
+				}
+			}
+		}
 		me._video_1.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
 				useTransition = false;
@@ -4222,6 +4274,34 @@ function pano2vrSkin(player,base) {
 		}
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
+		}
+		me._video_2.logicBlock_visible = function() {
+			var newLogicStateVisible;
+			if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicStateVisible = 0;
+			}
+			else {
+				newLogicStateVisible = -1;
+			}
+			if (me._video_2.ggCurrentLogicStateVisible != newLogicStateVisible) {
+				me._video_2.ggCurrentLogicStateVisible = newLogicStateVisible;
+				me._video_2.style[domTransition]='';
+				if (me._video_2.ggCurrentLogicStateVisible == 0) {
+					me._video_2.style.visibility="hidden";
+					me._video_2.ggInitMedia('');
+					me._video_2.ggVisible=false;
+				}
+				else {
+					me._video_2.style.visibility=(Number(me._video_2.style.opacity)>0||!me._video_2.style.opacity)?'inherit':'hidden';
+					if (me._video_2.ggVideoNotLoaded) {
+						me._video_2.ggInitMedia(me._video_2.ggVideoSource);
+					}
+					me._video_2.ggVisible=true;
+				}
+			}
 		}
 		me._video_2.ggUpdatePosition=function (useTransition) {
 			if (useTransition==='undefined') {
@@ -5534,9 +5614,12 @@ this.__div.style.top = vs.height / 2 + "px";
 	me._seta0.logicBlock_text();
 	me._seta.logicBlock_text();
 	me._enter_vr.logicBlock_visible();
+	me._rectangle_2.logicBlock_visible();
+	me._video_1.logicBlock_visible();
+	me._video_2.logicBlock_visible();
 	player.addListener('sizechanged', function(args) { me._tt_enter_vr.logicBlock_position();me._adm_4.logicBlock_scaling();me._adm_5.logicBlock_scaling();me._adm_1.logicBlock_scaling();me._parking_2.logicBlock_scaling();me._parking_1.logicBlock_scaling();me._adm_3.logicBlock_scaling();me._adm_2.logicBlock_scaling();me._nivel_2_a.logicBlock_scaling();me._nivel_2_b.logicBlock_scaling(); });
 	player.addListener('changenode', function(args) { me._information.logicBlock_visible();me._data.logicBlock_backgroundcolor();me._data.logicBlock_bordercolor();me._data.logicBlock_text();me._adm_4.logicBlock_scaling();me._adm_4.logicBlock_backgroundcolor();me._adm_5.logicBlock_scaling();me._adm_5.logicBlock_backgroundcolor();me._adm_1.logicBlock_scaling();me._adm_1.logicBlock_backgroundcolor();me._parking_2.logicBlock_scaling();me._parking_2.logicBlock_backgroundcolor();me._parking_1.logicBlock_scaling();me._parking_1.logicBlock_backgroundcolor();me._adm_3.logicBlock_scaling();me._adm_3.logicBlock_backgroundcolor();me._adm_2.logicBlock_scaling();me._adm_2.logicBlock_backgroundcolor();me._botao_nivel_2.logicBlock_backgroundcolor();me._botao_nivel_2.logicBlock_textcolor();me._botao_nivel_1.logicBlock_backgroundcolor();me._botao_nivel_1.logicBlock_textcolor();me._nivel_2_a.logicBlock_scaling();me._nivel_2_a.logicBlock_backgroundcolor();me._nivel_2_b.logicBlock_scaling();me._nivel_2_b.logicBlock_backgroundcolor();me._seta0.logicBlock_text();me._seta.logicBlock_text(); });
-	player.addListener('configloaded', function(args) { me._enter_vr.logicBlock_visible(); });
+	player.addListener('configloaded', function(args) { me._enter_vr.logicBlock_visible();me._rectangle_2.logicBlock_visible();me._video_1.logicBlock_visible();me._video_2.logicBlock_visible(); });
 	player.addListener('activehotspotchanged', function(args) { me._adm_4.logicBlock_scaling();me._adm_4.logicBlock_backgroundcolor();me._adm_5.logicBlock_scaling();me._adm_5.logicBlock_backgroundcolor();me._adm_1.logicBlock_scaling();me._adm_1.logicBlock_backgroundcolor();me._parking_2.logicBlock_scaling();me._parking_2.logicBlock_backgroundcolor();me._parking_1.logicBlock_scaling();me._parking_1.logicBlock_backgroundcolor();me._adm_3.logicBlock_scaling();me._adm_3.logicBlock_backgroundcolor();me._adm_2.logicBlock_scaling();me._adm_2.logicBlock_backgroundcolor();me._nivel_2_a.logicBlock_scaling();me._nivel_2_a.logicBlock_backgroundcolor();me._nivel_2_b.logicBlock_scaling();me._nivel_2_b.logicBlock_backgroundcolor(); });
 	player.addListener('varchanged_vis_info_popup', function(args) { me._information.logicBlock_visible(); });
 	player.addListener('varchanged_SEMANA_PASSADA', function(args) { me._data.logicBlock_backgroundcolor();me._data.logicBlock_bordercolor();me._data.logicBlock_text(); });
