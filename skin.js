@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.13/18080
 // Filename: Obra_360.ggsk
-// Generated 2024-07-11T20:48:02
+// Generated 2024-07-11T20:51:52
 
 function pano2vrSkin(player,base) {
 	player.addVariable('TITLES', 2, false);
@@ -737,7 +737,7 @@ function pano2vrSkin(player,base) {
 				me._data.style[domTransition]='' + cssPrefix + 'transform 0s, background-color 0s, border-color 0s';
 				if (me._data.ggCurrentLogicStateScaling == 0) {
 					me._data.ggParameter.sx = 0.8;
-					me._data.ggParameter.sy = 8;
+					me._data.ggParameter.sy = 0.8;
 					me._data.style[domTransform]=parameterToTransform(me._data.ggParameter);
 				}
 				else {
@@ -2590,7 +2590,7 @@ function pano2vrSkin(player,base) {
 				me._botao_nivel_2.style[domTransition]='' + cssPrefix + 'transform 0s, background-color 500ms ease 0ms, color 500ms ease 0ms';
 				if (me._botao_nivel_2.ggCurrentLogicStateScaling == 0) {
 					me._botao_nivel_2.ggParameter.sx = 0.8;
-					me._botao_nivel_2.ggParameter.sy = 8;
+					me._botao_nivel_2.ggParameter.sy = 0.8;
 					me._botao_nivel_2.style[domTransform]=parameterToTransform(me._botao_nivel_2.ggParameter);
 				}
 				else {
@@ -2671,7 +2671,7 @@ function pano2vrSkin(player,base) {
 		hs+='height : 20px;';
 		hs+='left : 5px;';
 		hs+='position : absolute;';
-		hs+='top : 1px;';
+		hs+='top : 0px;';
 		hs+='visibility : inherit;';
 		hs+='width : 100px;';
 		hs+='pointer-events:auto;';
@@ -2717,7 +2717,7 @@ function pano2vrSkin(player,base) {
 				me._botao_nivel_1.style[domTransition]='' + cssPrefix + 'transform 0s, background-color 500ms ease 0ms, color 500ms ease 0ms';
 				if (me._botao_nivel_1.ggCurrentLogicStateScaling == 0) {
 					me._botao_nivel_1.ggParameter.sx = 0.8;
-					me._botao_nivel_1.ggParameter.sy = 8;
+					me._botao_nivel_1.ggParameter.sy = 0.8;
 					me._botao_nivel_1.style[domTransform]=parameterToTransform(me._botao_nivel_1.ggParameter);
 				}
 				else {
@@ -2824,7 +2824,7 @@ function pano2vrSkin(player,base) {
 		el.appendChild(els);
 		el.ggSubElement = els;
 		el.ggId="Atras";
-		el.ggDx=-110;
+		el.ggDx=-109;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=true;
 		el.className="ggskin ggskin_image ";
@@ -2858,16 +2858,42 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._atras.ggCurrentLogicStatePosition != newLogicStatePosition) {
 				me._atras.ggCurrentLogicStatePosition = newLogicStatePosition;
-				me._atras.style[domTransition]='left 0s, top 0s';
+				me._atras.style[domTransition]='left 0s, top 0s, ' + cssPrefix + 'transform 0s';
 				if (me._atras.ggCurrentLogicStatePosition == 0) {
 					this.ggDx = -100;
 					me._atras.style.top='-1px';
 					me._atras.ggUpdatePosition(true);
 				}
 				else {
-					me._atras.ggDx=-110;
+					me._atras.ggDx=-109;
 					me._atras.style.top='-1px';
 					me._atras.ggUpdatePosition(true);
+				}
+			}
+		}
+		me._atras.logicBlock_scaling = function() {
+			var newLogicStateScaling;
+			if (
+				((player.getIsMobile() == true))
+			)
+			{
+				newLogicStateScaling = 0;
+			}
+			else {
+				newLogicStateScaling = -1;
+			}
+			if (me._atras.ggCurrentLogicStateScaling != newLogicStateScaling) {
+				me._atras.ggCurrentLogicStateScaling = newLogicStateScaling;
+				me._atras.style[domTransition]='left 0s, top 0s, ' + cssPrefix + 'transform 0s';
+				if (me._atras.ggCurrentLogicStateScaling == 0) {
+					me._atras.ggParameter.sx = 0.8;
+					me._atras.ggParameter.sy = 0.8;
+					me._atras.style[domTransform]=parameterToTransform(me._atras.ggParameter);
+				}
+				else {
+					me._atras.ggParameter.sx = 1;
+					me._atras.ggParameter.sy = 1;
+					me._atras.style[domTransform]=parameterToTransform(me._atras.ggParameter);
 				}
 			}
 		}
@@ -3062,7 +3088,7 @@ function pano2vrSkin(player,base) {
 				me._avano.style[domTransition]='left 0s, top 0s, ' + cssPrefix + 'transform 0s';
 				if (me._avano.ggCurrentLogicStateScaling == 0) {
 					me._avano.ggParameter.sx = 0.8;
-					me._avano.ggParameter.sy = 8;
+					me._avano.ggParameter.sy = 0.8;
 					me._avano.style[domTransform]=parameterToTransform(me._avano.ggParameter);
 				}
 				else {
@@ -3233,7 +3259,7 @@ function pano2vrSkin(player,base) {
 				me._text_1.style[domTransition]='' + cssPrefix + 'transform 0s';
 				if (me._text_1.ggCurrentLogicStateScaling == 0) {
 					me._text_1.ggParameter.sx = 0.8;
-					me._text_1.ggParameter.sy = 8;
+					me._text_1.ggParameter.sy = 0.8;
 					me._text_1.style[domTransform]=parameterToTransform(me._text_1.ggParameter);
 				}
 				else {
@@ -3932,7 +3958,7 @@ function pano2vrSkin(player,base) {
 		el.className="ggskin ggskin_text ";
 		el.ggType='text';
 		hs ='';
-		hs+='height : 20px;';
+		hs+='height : 19px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
 		hs+='top : -10000px;';
@@ -3947,7 +3973,7 @@ function pano2vrSkin(player,base) {
 		hs+='left: 0px;';
 		hs+='top:  0px;';
 		hs+='width: 100px;';
-		hs+='height: 20px;';
+		hs+='height: 19px;';
 		hs+='background: #aa5500;';
 		hs+='border: 0px solid #000000;';
 		hs+='color: rgba(255,255,255,1);';
@@ -3987,7 +4013,7 @@ function pano2vrSkin(player,base) {
 				me._seta0.style[domTransition]='' + cssPrefix + 'transform 0s';
 				if (me._seta0.ggCurrentLogicStateScaling == 0) {
 					me._seta0.ggParameter.sx = 0.8;
-					me._seta0.ggParameter.sy = 8;
+					me._seta0.ggParameter.sy = 0.8;
 					me._seta0.style[domTransform]=parameterToTransform(me._seta0.ggParameter);
 				}
 				else {
@@ -4187,7 +4213,7 @@ function pano2vrSkin(player,base) {
 		el.ggTextDiv=els;
 		el.ggId="Seta";
 		el.ggDx=0;
-		el.ggDy=25;
+		el.ggDy=24;
 		el.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		el.ggVisible=false;
 		el.className="ggskin ggskin_text ";
@@ -5957,6 +5983,7 @@ this.__div.style.top = vs.height / 2 + "px";
 	me._botao_nivel_2.logicBlock_scaling();
 	me._botao_nivel_1.logicBlock_scaling();
 	me._atras.logicBlock_position();
+	me._atras.logicBlock_scaling();
 	me._avano.logicBlock_position();
 	me._avano.logicBlock_scaling();
 	me._text_1.logicBlock_scaling();
@@ -5970,7 +5997,7 @@ this.__div.style.top = vs.height / 2 + "px";
 	me._video_2.logicBlock_visible();
 	player.addListener('sizechanged', function(args) { me._tt_enter_vr.logicBlock_position();me._adm_4.logicBlock_scaling();me._adm_5.logicBlock_scaling();me._adm_1.logicBlock_scaling();me._parking_2.logicBlock_scaling();me._parking_1.logicBlock_scaling();me._adm_3.logicBlock_scaling();me._adm_2.logicBlock_scaling();me._nivel_2_a.logicBlock_scaling();me._nivel_2_b.logicBlock_scaling(); });
 	player.addListener('changenode', function(args) { me._information.logicBlock_visible();me._data.logicBlock_backgroundcolor();me._data.logicBlock_bordercolor();me._data.logicBlock_text();me._adm_4.logicBlock_scaling();me._adm_4.logicBlock_backgroundcolor();me._adm_5.logicBlock_scaling();me._adm_5.logicBlock_backgroundcolor();me._adm_1.logicBlock_scaling();me._adm_1.logicBlock_backgroundcolor();me._parking_2.logicBlock_scaling();me._parking_2.logicBlock_backgroundcolor();me._parking_1.logicBlock_scaling();me._parking_1.logicBlock_backgroundcolor();me._adm_3.logicBlock_scaling();me._adm_3.logicBlock_backgroundcolor();me._adm_2.logicBlock_scaling();me._adm_2.logicBlock_backgroundcolor();me._botao_nivel_2.logicBlock_backgroundcolor();me._botao_nivel_2.logicBlock_textcolor();me._botao_nivel_1.logicBlock_backgroundcolor();me._botao_nivel_1.logicBlock_textcolor();me._nivel_2_a.logicBlock_scaling();me._nivel_2_a.logicBlock_backgroundcolor();me._nivel_2_b.logicBlock_scaling();me._nivel_2_b.logicBlock_backgroundcolor();me._seta0.logicBlock_text();me._seta.logicBlock_text(); });
-	player.addListener('configloaded', function(args) { me._enter_vr.logicBlock_visible();me._data.logicBlock_scaling();me._nivel_1.logicBlock_scaling();me._botao_nivel_2.logicBlock_scaling();me._botao_nivel_1.logicBlock_scaling();me._atras.logicBlock_position();me._avano.logicBlock_position();me._avano.logicBlock_scaling();me._text_1.logicBlock_scaling();me._nivel_2.logicBlock_scaling();me._rectangle_10.logicBlock_scaling();me._seta0.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._seta.logicBlock_scaling();me._rectangle_2.logicBlock_visible();me._video_1.logicBlock_visible();me._video_2.logicBlock_visible(); });
+	player.addListener('configloaded', function(args) { me._enter_vr.logicBlock_visible();me._data.logicBlock_scaling();me._nivel_1.logicBlock_scaling();me._botao_nivel_2.logicBlock_scaling();me._botao_nivel_1.logicBlock_scaling();me._atras.logicBlock_position();me._atras.logicBlock_scaling();me._avano.logicBlock_position();me._avano.logicBlock_scaling();me._text_1.logicBlock_scaling();me._nivel_2.logicBlock_scaling();me._rectangle_10.logicBlock_scaling();me._seta0.logicBlock_scaling();me._rectangle_1.logicBlock_scaling();me._seta.logicBlock_scaling();me._rectangle_2.logicBlock_visible();me._video_1.logicBlock_visible();me._video_2.logicBlock_visible(); });
 	player.addListener('activehotspotchanged', function(args) { me._adm_4.logicBlock_scaling();me._adm_4.logicBlock_backgroundcolor();me._adm_5.logicBlock_scaling();me._adm_5.logicBlock_backgroundcolor();me._adm_1.logicBlock_scaling();me._adm_1.logicBlock_backgroundcolor();me._parking_2.logicBlock_scaling();me._parking_2.logicBlock_backgroundcolor();me._parking_1.logicBlock_scaling();me._parking_1.logicBlock_backgroundcolor();me._adm_3.logicBlock_scaling();me._adm_3.logicBlock_backgroundcolor();me._adm_2.logicBlock_scaling();me._adm_2.logicBlock_backgroundcolor();me._nivel_2_a.logicBlock_scaling();me._nivel_2_a.logicBlock_backgroundcolor();me._nivel_2_b.logicBlock_scaling();me._nivel_2_b.logicBlock_backgroundcolor(); });
 	player.addListener('varchanged_vis_info_popup', function(args) { me._information.logicBlock_visible(); });
 	player.addListener('varchanged_SEMANA_PASSADA', function(args) { me._data.logicBlock_backgroundcolor();me._data.logicBlock_bordercolor();me._data.logicBlock_text(); });
