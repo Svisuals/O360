@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 6.1.13/18080
 // Filename: Obra_360.ggsk
-// Generated 2024-07-12T07:15:51
+// Generated 2024-07-12T07:32:05
 
 function pano2vrSkin(player,base) {
 	player.addVariable('TITLES', 2, false);
@@ -3084,7 +3084,7 @@ function pano2vrSkin(player,base) {
 		hs+='height : 30px;';
 		hs+='left : -10000px;';
 		hs+='position : absolute;';
-		hs+='top : -2px;';
+		hs+='top : -3px;';
 		hs+='visibility : inherit;';
 		hs+='width : 30px;';
 		hs+='pointer-events:auto;';
@@ -3111,13 +3111,13 @@ function pano2vrSkin(player,base) {
 				me._avano.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._avano.style[domTransition]='left 0s, top 0s, ' + cssPrefix + 'transform 0s';
 				if (me._avano.ggCurrentLogicStatePosition == 0) {
-					this.ggDx = 70;
+					this.ggDx = 144;
 					me._avano.style.top='-2px';
 					me._avano.ggUpdatePosition(true);
 				}
 				else {
 					me._avano.ggDx=106;
-					me._avano.style.top='-2px';
+					me._avano.style.top='-3px';
 					me._avano.ggUpdatePosition(true);
 				}
 			}
